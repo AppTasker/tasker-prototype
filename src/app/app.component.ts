@@ -33,20 +33,26 @@ export class MyApp {
         this.initializeApp();
 
         this.appMenuItems = [
-            {title: 'Properties', component: PropertyListPage, icon: 'home'},
-            {title: 'Brokers', component: BrokerListPage, icon: 'people'},
+            {title: 'Join us', component: PropertyListPage, icon: 'md-contacts'},
+            {title: 'Browse Tasks', component: BrokerListPage, icon: 'ios-folder-open'},
+            {title: 'Categories', component: WelcomePage, icon: 'md-images'},
             {title: 'Favorites', component: FavoriteListPage, icon: 'star'},
-            {title: 'Get Preapproved', component: WelcomePage, icon: 'checkmark-circle'},
-        ];
-
-        this.accountMenuItems = [
-            {title: 'My Account', component: WelcomePage, icon: 'ios-contact'},
-            {title: 'Logout', component: WelcomePage, icon: 'log-out'},
+    
         ];
 
         this.helpMenuItems = [
-            {title: 'Welcome', component: WelcomePage, icon: 'bookmark'},
-            {title: 'About', component: AboutPage, icon: 'information-circle'},
+            {title: 'Help', component: WelcomePage, icon: 'ios-help'},
+            {title: 'Insurance', component: WelcomePage, icon: 'ios-information'},
+            {title: 'Privacy Policy', component: WelcomePage, icon: 'ios-lock'},
+            {title: 'Terms & Condition', component: WelcomePage, icon: 'ios-book-outline'},
+            {title: 'Community Guidelines', component: WelcomePage, icon: 'ios-compass-outline'},
+            {title: 'Contact us', component: WelcomePage, icon: 'ios-call'},
+            {title: 'About us', component: AboutPage, icon: 'information-circle'},
+        ];
+
+        this.accountMenuItems = [
+            {title: 'My Account', component: WelcomePage, icon: 'ios-contact-outline'},
+            {title: 'Logout', component: WelcomePage, icon: 'log-out'},
         ];
 
     }
@@ -64,5 +70,11 @@ export class MyApp {
         // Reset the content nav to have just this page
         // we wouldn't want the back button to show in this scenario
         this.nav.setRoot(page.component);
+    }
+    
+    openHome() {
+        // Reset the content nav to have just this page
+        // we wouldn't want the back button to show in this scenario
+        this.nav.setRoot(WelcomePage);
     }
 }
